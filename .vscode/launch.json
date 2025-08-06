@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Your own server",
+            "type": "al",
+            "request": "launch",
+            "server": "http://localhost:8080/KenyaSprings/",
+            "serverInstance": "KenyaSprings",
+            "port": 3064,
+            "authentication": "Windows",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "usePublicURLFromServer": true,
+            "tenant": "default",
+            "schemaUpdateMode": "ForceSync"
+        },
+        {
+            "name": "Paivy_Debug",
+            "type": "al",
+            "request": "attach",
+            "server": "http://localhost:8080/KenyaSprings/",
+            "port": 3064,
+            "serverInstance": "KenyaSprings",
+            "authentication": "Windows",
+            "breakOnError": true,
+            "breakOnRecordWrite": false,
+            "enableSqlInformationDebugger": true,
+            "enableLongRunningSqlStatements": true,
+            "longRunningSqlStatementsThreshold": 500,
+            "numberOfSqlStatements": 10,
+            "breakOnNext": "WebClient"
+        },
+    ]
+}
