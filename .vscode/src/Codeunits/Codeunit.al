@@ -105,15 +105,7 @@ codeunit 50167 "Customer Classification Mgt."
 
 
 
-    [EventSubscriber(ObjectType::Table, Database::"Sales Header", 'OnAfterInsertEvent', '', false, false)]
-    local procedure OnAfterInsertSalesOrder(var Rec: Record "Sales Header")
-    begin
-        if Rec.IsTemporary() then
-            exit;
-            
-        if Rec."Document Type" = Rec."Document Type"::Order then
-            UpdateCustomerClassification(Rec."Sell-to Customer No.");
-    end;
+    
 
    
 
